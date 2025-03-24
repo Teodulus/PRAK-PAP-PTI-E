@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latihan Layouting Tabel dan Form</title>
+<style>
+table {
+border: solid 1px black;
+/* Mengartikan bahwasannya border type solid dengan ketebalan
+1px dan color */
+border-collapse: collapse;
+/* Untuk merge border menjadi 1 line */
+}
+td, th {
+width: 100px;
+height: 70px;
+text-align: center;
+vertical-align: middle;
+}
+td {
+font-size: 11px;
+}
+</style>
+<!-- Jangan Tambah atau kurangi CSS yang ada! -->
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <th colspan="7" class="center">Form Pendaftaran Peserta Didik Baru</th>
+            </tr>
+            <tr>
+                <tr>
+                    <td colspan="1"><strong>Nama</strong></td>
+                    <td colspan="3"><input type="text" placeholder="Nama Depan"></td>
+                    <td colspan="3"><input type="text" placeholder="Nama Belakang"></td>
+                </tr>
+            </tr>
+            <tr>
+                <td>USIA/TTL</td>
+                <td colspan="2"><input type="number" placeholder="Masukkan Usia"></td>
+                <td colspan="2" rowspan="2"><input type="text" placeholder="Kota"></td>
+                <td colspan="2"><input type="date" value="2025-03-24"></td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td colspan="2"><input type="text" placeholder="Kelurahan"></td>
+                <td colspan="2">
+                    <select>
+                        <option>Jawa Timur</option>
+                        <option>Jawa Tengah</option>
+                        <option>Jawa Barat</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">Gender</td>
+                <td colspan="3"><input type="radio" name="gender"> Laki-laki</td>
+                <td colspan="3"><input type="radio" name="gender"> Perempuan</td>
+                
+            </tr>
+            <tr>
+                <td>Jurusan Pilihan</td>
+                <td colspan="1"><input type="radio" name="jurusan"> IPA</td>
+                <td colspan="1"><input type="radio" name="jurusan"> IPS</td>
+                <td colspan="1"><input type="radio" name="jurusan"> Bahasa</td>
+                <td colspan="1"><input type="radio" name="jurusan"> Agama</td>
+                <td colspan="1"><input type="radio" name="jurusan"> TI</td>
+                <td colspan="1"><input type="radio" name="jurusan"> Elektro</td>
+                
+            </tr>
+            <tr>
+                <td colspan="1">Dokumen</td>
+                <td colspan="3">
+                    <input type="file"> Foto Profil (png, jpg, jpeg)
+  
+                <td colspan="3">
+                    <input type="file"> Ijazah SMP (pdf)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <input type="checkbox"> Saya menyetujui semua persyaratan pada pendaftaran ini!
+                </td>
+
+                <td colspan="1" class="center"><button type="submit">Daftar</button> </td>
+                <td colspan="1" class="center"><button type="reset">Reset</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
